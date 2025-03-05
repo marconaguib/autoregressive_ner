@@ -250,9 +250,6 @@ if not args.grid_search:
         if feature_name == "prompt_language" and dataset_language == "en":
             #we don't want to test prompt_language if the dataset is already in english
             continue
-        if feature_name == "n_few_shot" and "BioMedLM" in args.model_name:
-            #we don't want to test n_few_shot if the model is BioMedLM
-            continue
         new_features = {feature_name: feature_value}
         #exceptionally, if the new feature is prompt_long_answer, we want to test it with one_step=False
         if feature_name == "prompt_long_answer" and "one_step" not in kept_features:
