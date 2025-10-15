@@ -10,7 +10,8 @@ import random
 from typing import Dict
 import string
 import torch
-from nlstruct import BRATDataset, HuggingfaceNERDataset, get_instance, get_config, InformationExtractor
+from nlstruct import BRATDataset, get_instance, get_config, InformationExtractor
+from nlstruct_extensions import HuggingfaceNERDataset
 from nlstruct.metrics import MetricsCollection
 from nlstruct.registry import get_instance
 from rich_logger import RichTableLogger
